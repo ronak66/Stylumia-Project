@@ -1,0 +1,14 @@
+<h1> Posts </h1>
+<br>
+<% @list.each do |x| %>
+    <div class="card" style="width: 18rem;left: 10px;">
+        <div class="card-body">
+          <h5 class="card-title"><%= x.title %></h5>
+          <h6 class="card-subtitle mb-2 text-muted">By: <%= User.where(id: x.user_id)[0].email %></h6>
+          <p class="card-text"><%= x.content %></p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+      <br>
+<% end %>
