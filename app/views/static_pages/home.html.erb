@@ -10,7 +10,7 @@
           <h5 class="card-title"><%= x.title %></h5>
           <h6 class="card-subtitle mb-2 text-muted">By: <%= x.user.username %></h6>
           <p class="card-text"><%= x.content %></p>
-          <a href="#" class="card-link">Card link</a>
+          <a class="card-link"><%= link_to 'Show Post', post_path(x.id) %></a> |
           <a href="#" class="card-link">Another link</a>
         </div>
       </div>

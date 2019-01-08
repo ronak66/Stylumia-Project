@@ -1,14 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<div class="container">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= @post.title %></h5>
+      <h6 class="card-subtitle mb-2 text-muted">By: <%= @post.user.username %></h6>
+      <p class="card-text"><%= @post.content %></p>
+      <% if current_user == @post.user %>
+      <a  class="card-link"><%= link_to 'Edit', edit_post_path(@post) %></a>
+      | <a  class="card-link"><%= link_to 'Delete', post_path(@post.id),  method: :delete %></a>
+      <% end %>
+    </div>
+  </div>
+  <br>
+</div>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
+<% @post.comments.each do |x| %>
+  <div>
+    <p><%= x.content %></p>
+  </div>
+<% end %>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'add comment', new_post_comment_path(@post.id) %>
+
+
+
+
+
+
+<!-- <%= link_to 'Back', posts_path %> -->
