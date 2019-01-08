@@ -10,6 +10,49 @@
   </head>
 
   <body>
-    <%= yield %>
+    <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+          <a class="navbar-brand" href="/">Blog</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                <% if user_signed_in? %>
+                  <li class="nav-item">
+                    <div class="dropdown">
+                      <button class="btn dropdown-toggle" style="color: blue;" type="button" data-toggle="dropdown"><%= current_user.username %><span class="caret"></span></button>
+                      <ul class="dropdown-menu">
+                        <%= link_to "Post List", post_list_path, class: "nav-item", class: "dropdown-item" %>
+                        <%= link_to "New Post", new_post_path, class: "nav-item", class: "dropdown-item" %>
+                        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                      </ul>
+                    </div>
+                  </li>
+                <% else %>   
+                  <li class="nav-item">
+                    <a><%= link_to "Sign In", new_user_session_path %></a>
+                  </li>
+                <% end %>
+                </ul>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <%= yield %>
+      </div>
   </body>
 </html>
