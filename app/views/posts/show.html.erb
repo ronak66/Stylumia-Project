@@ -1,6 +1,6 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p> -->
 
-<div class="container">
+<!-- <div class="container">
   <div class="card" style="width: 18rem;">
     <div class="card-body">
       <h5 class="card-title"><%= @post.title %></h5>
@@ -12,16 +12,69 @@
       <% end %>
     </div>
   </div>
-  <br>
+  <br> -->
+<head>
+ 
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Bulma Version 0.7.2-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+</head>
+
+
+<div class="card article">
+    <div class="card-content">
+        <div class="media">
+            <div class="media-content has-text-centered">
+                <p class="title is-1"><%= @post.title.slice(0,1).capitalize + @post.title.slice(1..-1) %></p>
+                <p class="subtitle is-5 article-subtitle">
+                     on <%= @post.created_at %>
+                </p>
+            </div>
+        </div>
+        <div class="" style="padding:0rem 1.5rem">
+            <p class="content is-medium">
+                <%= @post.content %>
+            </p>
+        </div>
+    </div>
 </div>
 
-<% @post.comments.each do |x| %>
-  <div>
-    <p><%= x.content %></p>
-  </div>
-<% end %>
+<hr>
+<br />
+<br />
+<div class="container">
+<h1 class="title is-3">Comments</h1>
+</div>
+<br />
+<br />
 
-<%= link_to 'add comment', new_post_comment_path(@post.id) %>
+  <% @post.comments.each do |x| %>
+    <div class="col-sm-8">
+            <div class="panel panel-white post panel-shadow">
+                <div class="post-heading">
+                    <div class="pull-left meta">
+                        <div class="title is-3" >
+                            <a href="#"><b><%= x.user.username %></b></a>
+                        </div>
+                        <h6 class="text-muted time">added a comment</h6>
+                        <p><%= x.content %></p>
+                    </div>
+                </div> 
+                <div class="post-description"></div>
+            </div>
+        </div>
+        <br>
+  <% end %>
+  <%= link_to 'add comment', new_post_comment_path(@post.id), class: "btn btn-primary" %>
+</div>
+<br>
+
+
+
+
+
 
 
 

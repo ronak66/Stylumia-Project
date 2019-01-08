@@ -27,12 +27,9 @@ class CommentsController < ApplicationController
     @comment = Comment.new(content: params[:comment][:content])
     @comment.user_id = current_user.id
     @comment.post_id = params[:post_id]
-    puts @comment.content
-    puts @comment.post_id
-    puts params
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to root_url, notice: 'Comment was successfully created.' }
+        format.html { redirect_to post_path(params[:post_id]), notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new }
