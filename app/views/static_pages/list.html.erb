@@ -7,7 +7,7 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 
                                 <div class="ml-2">
-                                    <div class="h5 m-0"><%= x.user.username %></div>
+                                    <div class="h5 m-0"><b>By: <%= x.user.username %></b></div>
                                     <div class="h7 text-muted"><%= x.created_at %></div>
                                 </div>
                             </div>
@@ -16,7 +16,7 @@
                     </div>
                     <div class="card-body">
                         
-                            <h5 class="card-title"><%= x.title.slice(0,1).capitalize + x.title.slice(1..-1) %></h5>
+                            <h5 class="card-title"><b>Topic: </b><i><%= x.title.slice(0,1).capitalize + x.title.slice(1..-1) %></i></h5>
 
 
                         <p class="card-text"><%= x.content[0..500] %> <%= link_to "....", post_path(x.id) %></p>
