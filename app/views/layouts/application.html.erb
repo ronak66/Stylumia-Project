@@ -25,7 +25,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <%= link_to 'New Post', new_post_path, class: "nav-link" %>
               </li>
               <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
@@ -35,7 +35,6 @@
                       <button class="btn dropdown-toggle" style="color: blue;" type="button" data-toggle="dropdown"><%= current_user.username %><span class="caret"></span></button>
                       <ul class="dropdown-menu">
                         <%= link_to "Post List", post_list_path, class: "nav-item", class: "dropdown-item" %>
-                        <%= link_to "New Post", new_post_path, class: "nav-item", class: "dropdown-item" %>
                         <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
                       </ul>
                     </div>
