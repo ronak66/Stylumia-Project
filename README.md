@@ -1,7 +1,7 @@
 # Stylumia Software Development Problem
 
-It is a simple blog where you need to login and you can add posts and find posts by different people you follow and also leave
-comments on their posts.
+It is a simple blog where you need to login and you can add posts and find posts by different people you follow and also leave comments on their posts.  
+**Check Out The Website here:** [https://obscure-ravine-46589.herokuapp.com/](https://obscure-ravine-46589.herokuapp.com/)
 
 ## Installation
 1. Ruby Version ~2.5.1
