@@ -9,7 +9,7 @@ It is a simple blog where you need to login and you can add posts and find posts
 For installation check out the guide    
 [https://guides.rubyonrails.org/v5.0/getting_started.html#creating-a-new-rails-project](https://guides.rubyonrails.org/v5.0/getting_started.html#creating-a-new-rails-project)
 
-## Setup To Rum
+## Sets To Run The Program
 1. Run `$ bundle install` on your terminal to install all the Gems
 2. Run `$ rails db:migrate` to set up the data base
 3. Run `$ bin/rails server`
