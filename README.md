@@ -1,6 +1,7 @@
 # Stylumia Software Development Problem
 
 It is a simple blog where you need to login and you can add posts and find posts by different people you follow and also leave comments on their posts.  
+The application is createsd using Ruby on Rails Framework with Sqlite3 for database
 **Check Out The Website here:** [https://obscure-ravine-46589.herokuapp.com/](https://obscure-ravine-46589.herokuapp.com/)
 
 ## Installation
@@ -9,7 +10,7 @@ It is a simple blog where you need to login and you can add posts and find posts
 For installation check out the guide    
 [https://guides.rubyonrails.org/v5.0/getting_started.html#creating-a-new-rails-project](https://guides.rubyonrails.org/v5.0/getting_started.html#creating-a-new-rails-project)
 
-## Sets To Run The Program
+## Sets To Run The Application
 1. Run `$ bundle install` on your terminal to install all the Gems
 2. Run `$ rails db:migrate` to set up the data base
 3. Run `$ bin/rails server`
