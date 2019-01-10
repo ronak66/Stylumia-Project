@@ -1,5 +1,7 @@
+<% if user_signed_in? %>
 <h1>New Comment</h1>
 
 <%= render 'form', comment: @comment %>
-
-<%= link_to 'Back', post_comments_path %>
+<% else %>
+<h1> Sign In To leave a comment </h1>
+<% end %>

@@ -1,6 +1,14 @@
-<h1>Editing Comment</h1>
+<% if user_signed_in? %>
+    <% if current_user.id == @comment.user %>
+    <h1>Editing Comment</h1>
 
-<%= render 'form', comment: @comment %>
+    <%= render 'form', comment: @comment %>
 
-<%= link_to 'Show', @comment %> |
-<%= link_to 'Back', comments_path %>
+    <%= link_to 'Show', @comment %> |
+    <%= link_to 'Back', comments_path %>
+    <% else %>
+    <h1> User Unauthorized </h1>
+    <% end %>
+<% else %>
+<h1> User Unauthorized </h1>
+<%end %>

@@ -41,9 +41,11 @@
     </div>
 </div>
 <br>
-<% if current_user.id == @post.user.id %>
+<% if user_signed_in? %>
+    <% if current_user.id == @post.user.id %>
 <div><%= link_to 'Edit Post', edit_post_path(@post.id), class: "btn btn-primary" %>
 <%= link_to 'Delete Post', post_path(@post.id), method: :delete, class: "btn btn-danger" %></div>
+<% end %>
 <% end %>
 <hr>
 <br />

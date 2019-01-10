@@ -1,10 +1,16 @@
-<% if current_user.id == @post.user.id %>
-<h1>Editing Post</h1>
+<% if user_signed_in? %>
+    <% if current_user.id == @post.user.id %>
+    <h1>Editing Post</h1>
 
-<%= render 'form', post: @post %>
+    <%= render 'form', post: @post %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+    <%= link_to 'Show', @post %> |
+    <%= link_to 'Back', posts_path %>
+    <% else %>
+    <h1> 
+    You are Unauthorized here
+    <h1>
+    <% end %>
 <% else %>
 <h1> 
     You are Unauthorized here
