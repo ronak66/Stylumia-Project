@@ -10,7 +10,7 @@ The application is createsd using Ruby on Rails Framework with Sqlite3 for datab
 For installation check out the guide    
 [https://guides.rubyonrails.org/v5.0/getting_started.html#creating-a-new-rails-project](https://guides.rubyonrails.org/v5.0/getting_started.html#creating-a-new-rails-project)
 
-## Sets To Run The Application
+## Setup To Run The Application
 1. Run `$ bundle install` on your terminal to install all the Gems
 2. Run `$ rails db:migrate` to set up the data base
 3. Run `$ bin/rails server`
