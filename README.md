@@ -1,7 +1,7 @@
 # Stylumia Software Development Problem
 
 It is a simple blog where you need to login and you can add posts and find posts by different people you follow and also leave comments on their posts.  
-The application is createsd using Ruby on Rails Framework with Sqlite3 for database
+The application is createsd using Ruby on Rails Framework with Sqlite3 for database  
 **Check Out The Website here:** [https://obscure-ravine-46589.herokuapp.com/](https://obscure-ravine-46589.herokuapp.com/)
 
 ## Installation
