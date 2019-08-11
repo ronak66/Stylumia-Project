@@ -100,3 +100,15 @@ Each module contains 3 files:
     There are two files, one `/connections/elastic_search.py` that contains `ElasticSearchFunctions` class which has all the necessary elastic search functions.  
     And the second one is `/connections/es_api.py` which contains all the data api (like whatsnew, trending, brands, gender_coategory_conbo etc)  
     
+## Server
+Flask app is running in the `server.py` file
+
+## Installation
+Run the following command to install all the dependencies:  
+`pip install requirements.txt`
+
+## Running the app
+Start the app by running this command:  
+`python server.py`
+
+
